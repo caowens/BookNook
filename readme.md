@@ -81,9 +81,7 @@ BookNook is a book reading and collecting app that allows you to manage your boo
 
 
 ## Wireframes
-
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="IMG_0332.jpeg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
