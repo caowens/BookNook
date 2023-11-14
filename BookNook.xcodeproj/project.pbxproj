@@ -19,6 +19,7 @@
 		4DD80FE42B02EAB1001C2EEC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD80FE32B02EAB1001C2EEC /* Book.swift */; };
 		4DD80FE62B03110C001C2EEC /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD80FE52B03110C001C2EEC /* BookCell.swift */; };
 		4DD80FF22B031C9B001C2EEC /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD80FF12B031C9B001C2EEC /* Nuke */; };
+		4DD80FF42B0328C1001C2EEC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD80FF32B0328C1001C2EEC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4DA822AA2AFB212100BACCC8 /* BookNookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4DD80FE32B02EAB1001C2EEC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		4DD80FE52B03110C001C2EEC /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		4DD80FF32B0328C1001C2EEC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				4DA822872AFB211D00BACCC8 /* AppDelegate.swift */,
 				4DA822892AFB211D00BACCC8 /* SceneDelegate.swift */,
 				4DA8228B2AFB211D00BACCC8 /* ViewController.swift */,
+				4DD80FF32B0328C1001C2EEC /* DetailViewController.swift */,
 				4DD80FE52B03110C001C2EEC /* BookCell.swift */,
 				4DA8228D2AFB211D00BACCC8 /* Main.storyboard */,
 				4DD80FE32B02EAB1001C2EEC /* Book.swift */,
@@ -275,6 +278,7 @@
 				4DD80FE42B02EAB1001C2EEC /* Book.swift in Sources */,
 				4DA8228C2AFB211D00BACCC8 /* ViewController.swift in Sources */,
 				4DA822882AFB211D00BACCC8 /* AppDelegate.swift in Sources */,
+				4DD80FF42B0328C1001C2EEC /* DetailViewController.swift in Sources */,
 				4DA8228A2AFB211D00BACCC8 /* SceneDelegate.swift in Sources */,
 				4DD80FE62B03110C001C2EEC /* BookCell.swift in Sources */,
 			);
