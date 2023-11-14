@@ -21,11 +21,10 @@ struct VolumeInfo: Decodable {
     let publishedDate: String
     let description: String
     let pageCount: Int
-    let averageRating: Int
     let imageLinks: ImageLinks
 }
 
 struct ImageLinks: Decodable {
-    let smallThumbnail: URL
-    let thumbnail: URL
+    let smallThumbnail: URL?
+    let thumbnail: URL?
 }
