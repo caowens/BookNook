@@ -14,6 +14,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         return books.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // MARK: - Pass the selected book data
+
+        // Get the index path for the selected row.
+        // `indexPathForSelectedRow` returns an optional `indexPath`, so we'll unwrap it with a guard.
+        guard let selectedIndexPath = homeTableView.indexPathForSelectedRow else { return }
+
+        // Get the selected book from the movies array using the selected index path's row
+        let selectedBook = books[selectedIndexPath.row]
+
+        // Get access to the detail view controller via the segue's destination. (guard to unwrap the optional)
+        guard let detailViewController = segue.destination as? DetailViewController else { return }
+
+        detailViewController.book = selectedBook
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create, configure, and return a table view cell for the given row (i.e., `indexPath.row`)
 
@@ -56,11 +72,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         homeTableView.dataSource = self
-        
-//        print(whatever)
-//        print(ProcessInfo.processInfo.environment["BOOKS_API_KEY"] ?? "No API key found at that string")
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         fetchBooks()
+    }
+    
+    // Customary to call the overridden method on `super` any time you override a method.
+    override func viewWillAppear(_ animated: Bool) {
+        // get the index path for the selected row
+        if let selectedIndexPath = homeTableView.indexPathForSelectedRow {
+
+            // Deselect the currently selected row
+            homeTableView.deselectRow(at: selectedIndexPath, animated: animated)
+        }
     }
     
     // Fetches a list of embeddable books from the Google Books API

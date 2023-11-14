@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 class DetailViewController: UIViewController {
     
@@ -16,11 +17,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-
+    var book: Book!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        titleLabel.text = book.volumeInfo.title
+        descriptionLabel.text = book.volumeInfo.description
+        navigationItem.largeTitleDisplayMode = .never
+        
+        // Turn the array of authors into a single string
+        let authorsString = book.volumeInfo.authors.joined(separator: ", ")
+        authorsLabel.text = "Author(s): \(authorsString)"
+        
+        publishedDateLabel.text = "Published Date: \(book.volumeInfo.publishedDate)"
+        pageCountLabel.text = "Page Count: \(book.volumeInfo.pageCount)"
+        
+        // Unwrap the optional cover path
+        if let coverPath = book.volumeInfo.imageLinks.thumbnail {
+
+           let imageUrl = coverPath
+
+            // Use the Nuke library's load image function to (async) fetch and load the image from the image URL.
+            Nuke.loadImage(with: imageUrl, into: coverImageView)
+        }
+        
     }
     
 
