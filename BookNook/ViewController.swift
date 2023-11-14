@@ -6,17 +6,42 @@
 //
 
 import UIKit
+import Nuke
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        // Return the number of rows for the table
+        return books.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        cell.textLabel?.text = "Row \(indexPath.row)"
-        
+        // Create, configure, and return a table view cell for the given row (i.e., `indexPath.row`)
+
+        // Get a reusable cell
+        // Returns a reusable table-view cell object for the specified reuse identifier and adds it to the table. This helps optimize table view performance as the app only needs to create enough cells to fill the screen and reuse cells that scroll off the screen instead of creating new ones.
+        // The identifier references the identifier you set for the cell previously in the storyboard.
+        // The `dequeueReusableCell` method returns a regular `UITableViewCell`, so we must cast it as our custom cell (i.e., `as! BookCell`) to access the custom properties you added to the cell.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookCell
+
+        // Get the book-associated table view row
+        let book = books[indexPath.row]
+
+        // Configure the cell (i.e., update UI elements like labels, image views, etc.)
+
+        // Unwrap the optional poster path
+        if let coverPath = book.volumeInfo.imageLinks.thumbnail {
+
+           let imageUrl = coverPath
+
+            // Use the Nuke library's load image function to (async) fetch and load the image from the image URL.
+            Nuke.loadImage(with: imageUrl, into: cell.coverImageView)
+        }
+
+        // Set the text on the labels
+        cell.titleLabel.text = book.volumeInfo.title
+        cell.descriptionLabel.text = book.volumeInfo.description
+
+        // Return the cell for use in the respective table view row
         return cell
     }
     

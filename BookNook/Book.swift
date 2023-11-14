@@ -25,6 +25,6 @@ struct VolumeInfo: Decodable {
 }
 
 struct ImageLinks: Decodable {
-    let smallThumbnail: URL
-    let thumbnail: URL
+    let smallThumbnail: URL?
+    let thumbnail: URL?
 }
