@@ -17,12 +17,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var shelveButton: UIButton!
+    @IBAction func didTapShelveButton(_ sender: UIButton) {
+        // Set the button's isSelected state to the opposite of it's current value.
+        sender.isSelected = !sender.isSelected
+    }
+    
     var book: Book!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set the button's corner radius to be 1/2  it's width. This will make a square button round.
+        shelveButton.layer.cornerRadius = shelveButton.frame.width / 2
         
         titleLabel.text = book.volumeInfo.title
         descriptionLabel.text = book.volumeInfo.description

@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description: Lorem ipsum dolor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etl-Dh-3pi">
-                                <rect key="frame" x="16" y="560" width="361" height="258"/>
+                                <rect key="frame" x="16" y="614" width="361" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -117,6 +117,20 @@
                                 <rect key="frame" x="93" y="121" width="206" height="269"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFW-AV-ipU">
+                                <rect key="frame" x="163" y="560" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="book.pages" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                </state>
+                                <state key="selected" image="book.pages.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapShelveButton:" destination="HPe-pp-imu" eventType="touchUpInside" id="bmj-X9-5ti"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6oO-TI-Fho"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -128,6 +142,7 @@
                         <outlet property="descriptionLabel" destination="etl-Dh-3pi" id="sOw-K5-xvU"/>
                         <outlet property="pageCountLabel" destination="Z3z-hU-MeG" id="JN1-UT-7wc"/>
                         <outlet property="publishedDateLabel" destination="y5y-ez-LIo" id="7f4-Qg-zGm"/>
+                        <outlet property="shelveButton" destination="HFW-AV-ipU" id="mOs-cd-Rvn"/>
                         <outlet property="titleLabel" destination="rcD-ME-Yd7" id="y7N-SK-90G"/>
                     </connections>
                 </viewController>
@@ -155,8 +170,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.pages" catalog="system" width="107" height="128"/>
+        <image name="book.pages.fill" catalog="system" width="107" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
