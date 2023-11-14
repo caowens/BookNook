@@ -217,6 +217,15 @@
                                     <action selector="didTapShelveButton:" destination="HPe-pp-imu" eventType="touchUpInside" id="bmj-X9-5ti"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO2-HQ-6bF">
+                                <rect key="frame" x="297" y="591" width="63" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read"/>
+                                <connections>
+                                    <action selector="readButtonPressed:" destination="HPe-pp-imu" eventType="touchUpInside" id="h1p-aa-gFR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6oO-TI-Fho"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -234,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nd-gY-JEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805.3435114503814" y="22.535211267605636"/>
+            <point key="canvasLocation" x="2770" y="6"/>
         </scene>
         <!--Home-->
         <scene sceneID="WHp-hF-O72">
@@ -261,6 +270,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ITJ-tK-zzP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kyR-Dz-EDi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

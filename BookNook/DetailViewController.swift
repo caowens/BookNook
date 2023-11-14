@@ -7,6 +7,7 @@
 
 import UIKit
 import Nuke
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -31,6 +32,16 @@ class DetailViewController: UIViewController {
             // 2.
             book.removeFromCollection()
         }
+    }
+    
+    
+    @IBAction func readButtonPressed(_ sender: Any) {
+        guard let readURL = book.volumeInfo.previewLink else {
+            return
+        }
+        
+        let safariVC = SFSafariViewController(url: readURL)
+        present(safariVC, animated: true, completion: nil)
     }
     
     var book: Book!
