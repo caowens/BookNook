@@ -17,7 +17,7 @@ Original App Design Project - README
 BookNook is a book reading and collecting app that allows you to manage your books, see new available books by category, create your own collection, read through pages, and keep track of your book marks.
 
 ### Video Walkthrough
-[TBD]
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5rODczY3I0azNrMTZ2eXo2dXYyeHloeDM0ODU0ZTE3OXNjcDZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LQaUX6Ynbhl29RVP5b/giphy-downsized-large.gif" title="BookNook Walkthrough" width='' alt='BookNook Walkthrough' />
 
 ### App Evaluation
 
@@ -94,3 +94,10 @@ BookNook is a book reading and collecting app that allows you to manage your boo
 * For some reason, the latest version of Nuke doesn't support the "loadImage()" function, so I spent a lot of time researching before just downloading the version of Nuke that we used in the past homework
 
 * I was getting an error when trying to load images about connection security, and had to change the App security protocols to allow loading of larger images.
+
+## Implemented User Features / Progress
+
+[X] User can view a list of books
+[X] User can view a description and cover of a book
+[X] User can save books to their collection
+[X] User can view saved books in their collection
