@@ -97,7 +97,7 @@ BookNook is a book reading and collecting app that allows you to manage your boo
 
 ## Implemented User Features / Progress
 
-[X] User can view a list of books
-[X] User can view a description and cover of a book
-[X] User can save books to their collection
-[X] User can view saved books in their collection
+- [X] User can view a list of books
+- [X] User can view a description and cover of a book
+- [X] User can save books to their collection
+- [X] User can view saved books in their collection
