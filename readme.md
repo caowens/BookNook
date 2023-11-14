@@ -16,9 +16,11 @@ Original App Design Project - README
 
 BookNook is a book reading and collecting app that allows you to manage your books, see new available books by category, create your own collection, read through pages, and keep track of your book marks.
 
+### Video Walkthrough
+[TBD]
+
 ### App Evaluation
 
-[Evaluation of your app across the following attributes]
 - **Category:** Entertainment
 - **Mobile:** Mobile is great for those who want to read on-the-go or don't have access to a computer. They can read while waiting in line or even when they want to snuggle up under a banket in bed with any weird position they want.
 - **Story:** Creates an easily accessible way for book readers to start or finish their favorite books on the go.
@@ -83,20 +85,12 @@ BookNook is a book reading and collecting app that allows you to manage your boo
 ## Wireframes
 <img src="IMG_0332.jpeg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+## Challenges 
 
-### [BONUS] Interactive Prototype
+* JSON Decoding wasn't working at first because I realized later that I was using a property that only shows on some books of the Google Books API  but not all books
 
-## Schema 
+* I didn't know how to install Swift packages, so downloading Nuke was a struggle
 
-[This section will be completed in Unit 9]
+* For some reason, the latest version of Nuke doesn't support the "loadImage()" function, so I spent a lot of time researching before just downloading the version of Nuke that we used in the past homework
 
-### Models
-
-[Add table of models]
-
-### Networking
-
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+* I was getting an error when trying to load images about connection security, and had to change the App security protocols to allow loading of larger images.
