@@ -121,7 +121,7 @@
                                             <outlet property="coverImageView" destination="HeK-sN-4ex" id="zuQ-sY-9zY"/>
                                             <outlet property="descriptionLabel" destination="JgE-jr-8Ou" id="UtI-Hh-tKU"/>
                                             <outlet property="titleLabel" destination="mKL-md-Q5m" id="DV7-Jf-kKt"/>
-                                            <segue destination="DLG-Ik-Has" kind="show" id="vbA-QA-R5v"/>
+                                            <segue destination="HPe-pp-imu" kind="show" id="T53-64-TKO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -300,9 +300,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIg-jU-ic0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="742"/>
+            <point key="canvasLocation" x="767" y="758"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T53-64-TKO"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="book.pages" catalog="system" width="107" height="128"/>

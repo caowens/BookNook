@@ -90,9 +90,9 @@ class CollectionViewController: UIViewController, UITableViewDataSource {
         let selectedBook = collectedBooks[selectedIndexPath.row]
 
         // Get access to the detail view controller via the segue's destination. (guard to unwrap the optional)
-//        guard let detailViewController = segue.destination as? DetailViewController else { return }
-//
-//        detailViewController.book = selectedBook
+        guard let detailViewController = segue.destination as? DetailViewController else { return }
+
+        detailViewController.book = selectedBook
     }
     
 
