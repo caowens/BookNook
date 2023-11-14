@@ -21,7 +21,6 @@ struct VolumeInfo: Decodable {
     let publishedDate: String
     let description: String
     let pageCount: Int
-    let averageRating: Int
     let imageLinks: ImageLinks
 }
 
