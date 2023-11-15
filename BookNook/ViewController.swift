@@ -8,6 +8,24 @@
 import UIKit
 import Nuke
 
+// create function for selecting a random color
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(
+           red:   .random(),
+           green: .random(),
+           blue:  .random(),
+           alpha: 1.0
+        )
+    }
+}
+
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows for the table
@@ -56,6 +74,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Set the text on the labels
         cell.titleLabel.text = book.volumeInfo.title
         cell.descriptionLabel.text = book.volumeInfo.description
+        
+        cell.backgroundColor = .random()
 
         // Return the cell for use in the respective table view row
         return cell
@@ -71,6 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        homeTableView.backgroundColor = .systemBrown
         homeTableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
         

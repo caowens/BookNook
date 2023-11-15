@@ -14,7 +14,7 @@ struct BookResponse: Decodable {
 struct Book: Codable, Equatable {
     static func == (lhs: Book, rhs: Book) -> Bool {
         return
-            lhs.volumeInfo.title == rhs.volumeInfo.title
+            lhs.volumeInfo.pageCount == rhs.volumeInfo.pageCount
     }
     
     let volumeInfo: VolumeInfo
@@ -105,9 +105,10 @@ struct VolumeInfo: Codable {
     let title: String
     let authors: [String]
     let publishedDate: String
-    let description: String
+    let description: String?
     let pageCount: Int
     let imageLinks: ImageLinks
+    let previewLink: URL?
 }
 
 struct ImageLinks: Codable {

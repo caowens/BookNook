@@ -7,6 +7,7 @@
 
 import UIKit
 import Nuke
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -33,10 +34,22 @@ class DetailViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func readButtonPressed(_ sender: Any) {
+        guard let readURL = book.volumeInfo.previewLink else {
+            return
+        }
+        
+        let safariVC = SFSafariViewController(url: readURL)
+        present(safariVC, animated: true, completion: nil)
+    }
+    
     var book: Book!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = .random()
 
         // Set the button's corner radius to be 1/2  it's width. This will make a square button round.
         shelveButton.layer.cornerRadius = shelveButton.frame.width / 2
