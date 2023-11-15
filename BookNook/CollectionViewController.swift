@@ -45,6 +45,8 @@ class CollectionViewController: UIViewController, UITableViewDataSource {
         // Set the text on the labels
         cell.titleLabel.text = book.volumeInfo.title
         cell.descriptionLabel.text = book.volumeInfo.description
+        
+        cell.backgroundColor = .random()
 
         // Return the cell for use in the respective table view row
         return cell
@@ -52,7 +54,7 @@ class CollectionViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionTableView.backgroundColor = .systemBrown
         collectionTableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
     }

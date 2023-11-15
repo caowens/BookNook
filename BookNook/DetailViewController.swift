@@ -48,6 +48,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = .random()
 
         // Set the button's corner radius to be 1/2  it's width. This will make a square button round.
         shelveButton.layer.cornerRadius = shelveButton.frame.width / 2
