@@ -101,3 +101,4 @@ BookNook is a book reading and collecting app that allows you to manage your boo
 - [X] User can view a description and cover of a book
 - [X] User can save books to their collection
 - [X] User can view saved books in their collection
+- [X] User can open and view pages of a book
