@@ -17,7 +17,7 @@ Original App Design Project - README
 BookNook is a book reading and collecting app that allows you to manage your books, see new available books by category, create your own collection, read through pages, and keep track of your book marks.
 
 ### Video Walkthrough
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5rODczY3I0azNrMTZ2eXo2dXYyeHloeDM0ODU0ZTE3OXNjcDZ6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LQaUX6Ynbhl29RVP5b/giphy-downsized-large.gif" title="BookNook Walkthrough" width='' alt='BookNook Walkthrough' />
+<img src="https://github.com/caowens/hostingGifs/blob/main/Kapture%202023-11-20%20at%2016.40.13.gif" title="BookNook Walkthrough" width='' alt='BookNook Walkthrough' />
 
 ### App Evaluation
 
